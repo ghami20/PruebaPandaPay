@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="enviarDinero.js"></script>
+    <!-- <script src="../../../js/views/Home.js"></script> -->
+    <link rel="stylesheet" href="styles.Ventas.css">
+    <link rel="stylesheet" href="stylesEnviarDinero.css">
+</head>
+<body>
+    <div id="content">
+        <!-- Contenido de ventas.html -->
+        <div class="content-table">
+        <div class="conteiner">
+            <div class="content-parrafo">
+            <span id="saldoCuenta"></span>
+        </div>
+        <div class="content-liquidacion">
+            <button id="abrirNuevaPestana" onclick="abrirPagina()">AÑADIR CONTACTOS</button>
+        </div>
+        </div>
+
+        <div class="search-filter">
+            <input type="text" placeholder="Buscar contacto">
+            <input type="text" placeholder="Monto a transferir">
+            <input type="text" placeholder="Referencia">
+            
+            <div class="button-container">
+                <button id="search">Enviar</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="miTabla" id="miTabla">
+                <thead>
+                    <tr class="a">
+                        <th>FECHA</th>
+                        <th>DESTINO</th>
+                        <th>CVU/ALIAS/CBU</th>
+                        <th>REFERENCIA</th>
+                        <th>MONTO</th>
+                        <th>STS</th>
+                        <th>BORRAR</th>
+                        <th>REC</th>
+                    </tr>
+                </thead>
+                <tbody id="tbbody">
+                    
+                </tbody>
+            </table>
+        </div>
+        </div>
+        
+<script>
+function mostrarDatosJSON() {
+  // Obtén la referencia al elemento donde deseas mostrar los datos
+  var datosDiv = document.getElementById("conteiner");
+  // Carga el archivo JSON
+  fetch('infoNav.json')
+    .then(response => response.json())
+    .then(data => {
+      if (data.length > 0) {
+        var item = data[0]; // Supongamos que solo necesitas el primer elemento del arreglo
+
+        // Agrega un salto de línea y luego el valor de DINERO EN CUENTA
+        document.getElementById("saldoCuenta").innerHTML = "DINERO EN CUENTA<br>" + item['DINERO EN CUENTA'];
+
+      } else {
+        console.error('El archivo JSON está vacío.');
+      }
+    })
+    .catch(error => {
+      console.error('Error al cargar el archivo JSON:', error);
+    });
+}
+</script>
+
+    </div>
+    <script>
+        
+        </script>
+
+</body>
+</html>

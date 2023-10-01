@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANDAPAY</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700">
+    
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="normalize.css">
+    
+    <!-- Custom CSS Stylesheets -->
+    <link rel="stylesheet" href="stylesInicio.css">
+    
+    <!-- JavaScript Files -->
+    <script src="table-inicio.js"></script>
+    <script src="inicio.js"></script>
+    <script src="FechaHora.js"></script>
+    <script src="inicio.js"></script>
+</head>
+
+<body>
+    <div class="mainn">
+        <div id="Slider">
+            <div class="slider-container">
+                <div class="slide fade">
+                    <img class="sliderImg" src="slider 1.jpg" alt="Slide 1">
+                </div>
+                <div class="slide fade">
+                    <img class="sliderImg" src="SLIDERGRIS.jpg" alt="Slide 2">
+                </div>
+                <div class="slide fade">
+
+                    <img class="sliderImg" src="SLIDER2.jpg" alt="Slide 3">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">Anterior</button>
+                <button class="next" onclick="changeSlide(1)">Siguiente</button>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="main-divs">
+                <div id="containerTop">
+                
+                    <section class="section" value="Venta" onclick="Abrir()">
+                        <div class="centered-content"> </div>
+                                <img src="/sales.png" alt="Sales">
+                                <div>VENTAS</div>
+                                <div>$0.00K</div>
+                       
+                    </section>
+                    
+                    <section class="section" value="Vento" onclick="Abrir()">
+                        <div class="centered-content">    </div>
+
+                            <img src="/total-sales.png" alt="totalSales">
+                            <div>VENTAS/TOTAL</div>
+                            <div>$0.00k</div>
+                    
+    
+                    </section>
+                    
+
+                    <section class="section" value="Liqui" onclick="Abrir()">
+                        <div class="centered-content">     </div>
+                            <img src="/liquidation.png" alt="totalSales">
+                                <div>LIQUIDACION</div>
+                               <div>HOY $0.00K</div>
+
+                           
+                    </section>
+                </div>
+
+                <div id="containerBottom">
+                    <section class="section" value="Compr" onclick="Abrir()">
+                        <div class="centered-content"> </div>
+                            <img src="/comprobante.png" alt="comprobante">
+                            COMPROBANTES
+                       
+                        
+                    </section>
+                    <section class="section" value="Envdi" onclick="Abrir()">
+                        <div class="centered-content"></div>
+                        
+                            <img src="/sendMoney.png" alt="sendMoney">
+                                <div>ENVIAR DINERO</div>
+                                <div>$697.17</div>
+                        
+                    </section>
+                    <section class="section" value="Pagse" onclick="Abrir()">
+                        <div class="centered-content"> </div>
+                        <img src="/ServicesPay.png" alt="ServicesPay">
+                            <div>PAGO DE SERVICIOS</div>
+                            <div>RAPIPAGO</div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="ultimos">
+                <p id="fechaActual"></p>
+                <table>
+                    <thead>
+                        <tr class="a">
+                            <th>FECHA</th>
+                            <th>CONCEPTO</th>
+                            <th>IMPORTE</th>
+                        </tr>
+                    </thead>
+                    <tbody  id="MiLista">
+                        <!-- Las filas de la tabla se generarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+                <button onclick="VerMas()" id="verMas">VER MAS</button>
+            </div>
+          
+        </div>
+    </div>
+</body>
+</html>

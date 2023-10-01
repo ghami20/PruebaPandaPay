@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PandaPay</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <!-- Cambiar a la fuente Open Sans y establecer negrita -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+
+            <div class="slider">
+                <div class="slide fade">
+                    <img src="panda (1).png" alt="Slide 3">
+                </div>
+                <div class="slide fade">
+                    <img src="Slider2.png" alt="Slide 2">
+                </div>
+                <div class="slide fade">
+                    <img src="panda (1).png" alt="Slide 3">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)"></button>
+                <button class="next" onclick="changeSlide(1)"></button>
+            </div>
+
+
+        </div>
+        <div class="right-side">
+            <div class="options">
+                <div class="option selected" onclick="selectOption(this)">Soy usuario</div>
+                <div class="option" onclick="selectOption(this)">No soy usuario</div>
+            </div>
+            
+            <div class="login-form" id="contenido">
+            </div>
+            <p><a href="https://www.pandapay.com.ar/" class="link-tree" target="_blank">www.pandapay.com</a></p>
+        </div>
+    </div>
+</body>
+</html>

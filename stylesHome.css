@@ -1,0 +1,350 @@
+/* Variables generales */
+:root {
+    --background-color: #868484;
+    --text-color: #333;
+    --link-color: rgb(13, 13, 12);
+    --border-color: rgb(231, 231, 231);
+    --font-size: 2.3vh;
+}
+/*------------------Ordenador portátil medio------------------*/
+@media screen and (min-width: 1366px) and (min-height: 768px) {
+    .container {
+        display: flex;
+        align-items: flex-start;
+        height: 100vh;
+        align-items: flex-start;
+    }
+    .menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 23%;
+        height: 88vh;
+        border: 2px solid #333;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+}
+/*-----------Ordenador de escritorio medio------------------*/
+  @media screen and (min-width: 1440px) and (min-height: 900px) {
+
+}
+
+/* Estilos para el body */
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-size: 120%;
+    overflow: hidden;
+}
+
+/* Estilos para el container */
+.container {
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+    align-items: flex-start;
+}
+
+/* Estilos para el header y navbar */
+.header {
+    background-color: #ffffff;
+    /* padding: 18px; */
+    height: 10vh;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    /* text-align: center; */
+    /* overflow-x: hidden; */
+    align-items: center;
+}
+
+.image-container {
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Alinea verticalmente en el centro */
+    /* background-color: violet; */
+    margin-left: 16px;
+    margin-right: 80px;
+}
+li button img {
+    width: 55px; /* Ancho deseado */
+    height: 55px; /* Altura deseada */
+    margin-right: 10px; /* Espacio entre la imagen y el texto del botón */
+    vertical-align: middle; /* Alinea verticalmente la imagen en el centro */
+}
+li a img {
+    width: 55px; /* Ancho deseado */
+    height: 55px; /* Altura deseada */
+    margin-right: 10px; /* Espacio entre la imagen y el texto del enlace */
+    vertical-align: middle; /* Alinea verticalmente la imagen en el centro */
+}
+.img-panda {
+    width: 26%; /* Ancho en porcentaje */
+    height: 8vh; /* Altura máxima en unidades de vista de altura (vh) */
+    background-image: url(../assets/logos/iso.png);
+    /* background-color: violet; */
+    background-repeat: no-repeat;
+    background-size: contain; /* La imagen se ajustará al tamaño del elemento sin recortar */
+}
+
+.img-logo {
+    width: 100%; /* Ancho en porcentaje */
+    height: 5vh; /* Altura máxima en unidades de vista de altura (vh) */
+    background-image: url(../assets/logos/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: cadetblue; */
+}
+#datos-json {
+    display: flex;
+    justify-content: space-around; /* Distribuir uniformemente los elementos */
+    /* background-color: violet; */
+    width: 67%;
+}
+
+.nav-User {
+    /* background-color: rgb(41, 137, 76); */
+    font-weight: bold;
+    width: 320px;
+    display: flex; /* Establece display: flex en .nav-User */
+    align-items: center; /* Alinea verticalmente la imagen con el texto */
+}
+.cuenta{
+    display: flex;
+    align-items: center;
+}
+.nav-paragraph {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 10px;
+}
+.nav-icons-img{
+    width: 36px
+}
+#dinero-en-cuenta{
+    /* background-color: violet; */
+    margin-top: 5px;
+}
+#merchant-id{
+    margin-bottom: 12px;
+}
+.nav-User.cuenta .valor,
+.nav-User.liquidar .valor {
+  align-items: flex-start; /* Alinea los valores a la izquierda (flex-start) */
+  display: flex;
+}
+
+
+#dinero-a-liquidar{
+    /* background-color: violet; */
+    margin-top: 5px;
+}
+
+.nav-User img {
+    margin-right: 7px;
+    width: 50px;
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+}
+
+
+.nav-paragraph:hover {
+    color: var(--link-color);
+}
+.nav-icon {
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+    margin-right: 5px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .button {
+    width: 100%;
+    justify-content: flex-start;
+}
+
+/* Estilos para el menú */
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 23%;
+    height: 88vh;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.menu button .icon {
+    display: inline-block;
+    width: 100px; /* Tamaño del ícono */
+    height: 40px; /* Tamaño del ícono */
+    background-image: url('../css/assets/homeIcon.jpg'); /* Ruta de la imagen del ícono */
+    background-repeat: no-repeat;
+    background-size: contain; /* Ajusta el tamaño de la imagen para caber en el espacio del ícono */
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.menu a .icon {
+    display: inline-block;
+    width: 100px; /* Tamaño del ícono */
+    height: 40px; /* Tamaño del ícono */
+    background-image: url('../css/assets/homeIcon.jpg'); /* Ruta de la imagen del ícono */
+    background-repeat: no-repeat;
+    background-size: contain; /* Ajusta el tamaño de la imagen para caber en el espacio del ícono */
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+.menu button {
+    text-decoration: none;
+    color: var(--link-color);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: var(--font-size);
+    text-align: left;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--link-color);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: var(--font-size);
+    text-align: left;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+
+.menu a:focus {
+    outline: none;
+}
+
+.menu button:focus {
+    outline: none;
+}
+
+.menu li {
+    padding: 12px;
+    text-align: left;
+    transition: border-left 0.3s, background-color 0.3s;
+    border-left: 4px solid transparent;
+    text-decoration: none;
+}
+
+.menu li.active {
+    border-left: 10px solid #8cc909;
+    background-color: var(--border-color);
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.option {
+    text-align: left;
+    padding: 10px 20px;
+    color: #888888;
+    cursor: pointer;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+/* Estilos para el contenido de ventas.html */
+#content {
+    width: 100%;
+    height: 100vh;
+    background-color: #d1e99d;
+}
+
+#miTabla {
+    border-collapse: collapse;
+    width: 30%;
+}
+
+.a {
+    border-bottom: 3px solid #444;
+}
+
+#content .table-container {
+    overflow: hidden;
+}
+
+/* Estilos para la búsqueda y el botón */
+.date-filter {
+    background-color: white;
+    padding: 20px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 60%;
+}
+.fi-rr-key {
+    font-size: 30px; /* Ajusta el tamaño según tus preferencias */
+}
+.fi-rs-document{
+    font-size: 30px
+}
+.fi-rr-yin-yang{
+    font-size: 30px
+}
+.fi-rr-eclipse{
+    font-size: 30px
+}
+.fi-rr-power{
+    font-size: 30px
+}
+.miboton{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+    -webkit-appearance: none;
+}

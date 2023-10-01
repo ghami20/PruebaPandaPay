@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANDAPAY</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="normalize.css">
+    <!-- Flaticon Icon Fonts -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!-- Custom JavaScript Files -->
+    <script src="Home.js"></script>
+    <script src="inicio.js"></script>
+    <script src="ventaTotal.js"></script>
+    <script src="venta.js"></script>
+    <script src="ventaInicio.js"></script>
+    <script src="enviarDinero.js"></script>
+    <script src="liquidacion.js"></script>
+    <!-- Custom CSS Stylesheets -->
+    <link rel="stylesheet" href="stylesHome.css">
+    <link rel="stylesheet" href="styleNigth.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar"> 
+            <div class="image-container">
+            <div class="img-panda"></div>
+            <div class="img-logo"></div>
+        </div>
+        <div id="datos-json">
+                <div class="nav-User id" value="Inici" onclick="Abrir()" >
+                        <img   src="user.png" alt="Usuario">
+                            <div>
+                                <span id="merchant-id"></span>
+                                <span id="ultima-visita"></span>
+                            </div>
+                </div>
+                <div class="nav-User cuenta" value="Envdi" onclick="Abrir()">
+                    <img src="sendMoney.png" alt="Usuario">
+                        <div  class="valor">
+                            <span id="dinero-en-cuenta"></span>
+                        </div>
+                </div> 
+
+            <div  class="nav-User liquidar" value="Liqui" onclick="Abrir()">
+                <img src="liquidateMoney.png" alt="Usuario">
+                    <div class="valor">
+                        <span id="dinero-a-liquidar"></span>
+                    </div>
+            </div>
+        </div>
+
+            <!-- <a href="#">
+                
+            </a> -->
+            <div class="nav-icon">
+            <a href="#">
+                <p class="nav-paragraph"><img class="nav-icons-img"src="icono_uno.png"></p>
+            </a>
+            <a href="#">
+                <p class="nav-paragraph"><img class="nav-icons-img" src="icono_dos.png"></p>
+            </a>
+            <a href="#" onclick="toggleNightMode(event)">
+                <p class="nav-paragraph"><img class="nav-icons-img" src="luna.png"></p>
+            </a>
+            <a href="#">
+                <p class="nav-paragraph"><img class="nav-icons-img" src="cambiarcontraseña_activo.png"></p>
+            </a>
+            <a href="index.html">
+                <p class="nav-paragraph" href="index.html"><img class="nav-icons-img" src="salir_activo.png"></p>
+            </a>
+        </div>
+        </nav>
+    </header>
+
+    <!-- Script para cargar datos JSON -->
+    <script>
+        function mostrarDatosJSON() {
+            // Obtén la referencia al elemento donde deseas mostrar los datos
+            var datosDiv = document.getElementById("datos-json");
+
+            // Carga el archivo JSON
+            fetch('infoNav.json')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        var item = data[0]; // Supongamos que solo necesitas el primer elemento del arreglo
+
+                        // Asigna valores a los elementos de texto dentro del contenedor
+                        document.getElementById("merchant-id").textContent = "MERCHANT ID: " + item['MERCHANT ID'];
+
+                        // Agrega un salto de línea y luego el valor de DINERO EN CUENTA
+                        document.getElementById("dinero-en-cuenta").innerHTML = "DINERO EN CUENTA<br>" + item['DINERO EN CUENTA'];
+
+                        // Agrega un salto de línea y luego el valor de DINERO A LIQUIDAR
+                        document.getElementById("dinero-a-liquidar").innerHTML = "DINERO A LIQUIDAR<br>" + item['DINERO A LIQUIDAR'];
+                    } else {
+                        console.error('El archivo JSON está vacío.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al cargar el archivo JSON:', error);
+                });
+        }
+
+        // Llama a la función para mostrar los datos del JSON
+        mostrarDatosJSON();
+    </script>
+
+    <!-- Script para mostrar la última visita -->
+    <script>
+        function mostrarUltimaVisita() {
+            // Obtiene la fecha y hora actual
+            var fechaHoraActual = new Date();
+
+            // Obtiene componentes individuales de la fecha y la hora
+            var dia = fechaHoraActual.getDate();
+            var mes = fechaHoraActual.getMonth() + 1; // Agregamos 1 porque enero es 0
+            var hora = fechaHoraActual.getHours();
+            var minutos = fechaHoraActual.getMinutes();
+
+            // Formatea la fecha y hora sin la coma
+            var fechaHoraFormato = dia + '/' + mes + ' ' + hora + ':' + (minutos < 10 ? '0' : '') + minutos;
+
+            // Muestra la fecha y hora en el elemento "ultima-visita"
+            document.getElementById("ultima-visita").textContent = "ULTIMA VISITA: " + fechaHoraFormato;
+        }
+
+        mostrarUltimaVisita();
+
+        
+    </script>
+
+    <!-- Script para manejar la selección de opciones del menú -->
+   
+
+    <div id="home">
+        <div id="content" >
+            
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <div class="menu">
+            <aside>
+                <nav>
+                    <ul>
+                        <li><button class="option selected" onclick="selectOption(this)"><img src="inicio_des.png" alt="Imagen 1">Inicio</button></li>
+                        <li><button class="option" onclick="selectOption(this)"><img src="sale_des.png" alt="Imagen 2">Ventas</button></li>
+                        <li><button class="option" onclick="selectOption(this)"><img src="sales_des.png" alt="Imagen 3">Ventas/Total</button></li>
+                        <li><button class="option" onclick="selectOption(this)" ><img src="liquidation_des.png" alt="Imagen 3">Liquidación</button></li>
+                        <li><button class="option" onclick="selectOption(this)" ><img src="comprobante_des.png" alt="Imagen 3">Comprobantes</button></li>
+                        <li><button class="option" onclick="selectOption(this)" ><img src="sendMoney_des.png" alt="Imagen 3">Enviar Dinero</button></li>
+                        <li><button class="option" onclick="selectOption(this)" ><img src="Payment services_des.png" alt="Imagen 3">Pago de Servicios</button></li>
+                        <li><button class="option" onclick="selectOption(this)" ><img src="changePassword.png" alt="Imagen 3">Cambiar Contraseña</button></li>
+                        <li><a class="option" href="index.html"><img src="getOut_des.png" alt="Imagen 3">Salir</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </div>
+    
+    <script>
+        const menuItems = document.querySelectorAll('.menu li');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Elimina la clase "active" de todos los elementos
+                menuItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Agrega la clase "active" al elemento clickeado
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

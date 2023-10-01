@@ -1,0 +1,22 @@
+[
+    {
+        "fecha": "2023-09-01",
+        "aprobadasTotal": "20/25",
+        "total": "$1000.00"
+    },
+    {
+        "fecha": "2023-09-02",
+        "aprobadasTotal": "18/20",
+        "total": "$950.00"
+    },
+    {
+        "fecha": "2023-09-03",
+        "aprobadasTotal": "22/24",
+        "total": "$1100.00"
+    },
+    {
+        "fecha": "2023-09-04",
+        "aprobadasTotal": "24/25",
+        "total": "$1200.00"
+    }
+]

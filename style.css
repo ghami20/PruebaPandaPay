@@ -1,0 +1,209 @@
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.left-side {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 40px;
+    border-left: 15px solid #878787;
+    flex-grow: 1;
+    height: 90%;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.option {
+    text-align: left;
+    padding: 10px 20px;
+    color: #888888;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.option.selected {
+    color: rgba(140, 201, 9, 255);
+}
+
+.login-form {
+    text-align: center;
+    margin-top: 40px;
+    width: 80%;
+    height: 150%;
+    font-weight: normal;
+}
+
+input {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.button {
+    background-color: rgba(140, 201, 9, 255);
+    color: #ffffff;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.terms {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    font-weight: normal;
+    flex-direction: row;
+}
+
+.terms label {
+    margin-right: 10px;
+    color: #888888;
+    white-space: nowrap;
+}
+
+.terms input {
+    font-size: 14px;
+    color: #888888;
+    width: 20px;
+}
+
+
+.image-container {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+.separator {
+    border-right: 1px solid #dddddd;
+    margin-right: 20px;
+}
+
+.clave {
+    color: #888888;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.text-form {
+    width: 100%;
+    color: #878787;
+}
+
+.footer {
+    text-align: center;
+    color: #878787;
+    margin-top: 30px;
+}
+
+.link-tree {
+    color: #878787;
+    text-decoration: none;
+}
+
+ .texto {
+    margin-bottom: 20px; 
+}
+
+
+.text-form {
+    text-align: center;
+    /* margin-top: 50px; */
+    font-size: 20px;
+    font-weight: 700;
+    
+    
+}
+
+.high {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+/* Estilos para el slider */
+/* Estilos para el slider */
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url('tu-imagen-de-fondo.jpg'); /* Agrega la imagen de fondo que desees */
+    background-size: cover;
+    background-position: center;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+/* .fade{
+    background-color: rgb(30, 176, 30);
+    width:100%;
+    height: 30vh;
+} */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(140, 201, 9, 255);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button.prev {
+    left: 10px;
+    background-color: white;
+    border-radius: 80px;
+}
+
+button.next {
+    right: 10px;
+    background-color: white;
+    border-radius: 80px;
+}

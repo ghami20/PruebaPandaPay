@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.Ventas.css">
+    <link rel="stylesheet" href="stylesVentasTotal.css">
+    <script src="ventaTotal.js"></script>
+</head>
+<body>
+    <div id="content">
+       
+        <!-- Contenido de ventas.html -->
+        <div class="content-table">
+            <div class="date-filter">
+                <div>
+                    <label for="fecha">Fecha:</label>
+                    <div id="fecha">
+                        <input id="Dia" type="number" min=1 max=31 value=1>
+                        <input id="Mes" type="number" min=1 max=12 value=1>
+                        <input id="Año" type="number" min=2022 max=2023 value=2023>
+                    </div>
+                </div>
+                <div>
+                    <label for="operacion">Operacion:</label>
+                    <select id="operacion" name="operacion">
+                        <option value="TODAS">TODAS</option>
+                        <option value="PAGO">PAGO</option>
+                        <option value="ANULACIÓN">ANULACIÓN</option>
+                        <option value="DEVOLUCIÓN">DEVOLUCIÓN</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option value="TODAS">TODAS</option>
+                        <option value="APROBADA">APROBADA</option>
+                        <option value="FALLIDA">FALLIDA</option>
+                        <option value="PENDIENTE">PENDIENTE</option>
+                        <option value="RECHAZADA">RECHAZADA</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="TODAS">TODAS</option>
+                        <option value="DEBITO">DEBITO</option>
+                        <option value="CREDITO">CREDITO</option>
+                        <option value="OTRA">OTRA</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="marca">Marca:</label>
+                    <select id="marca" name="marca">
+                        <option value="TODAS">TODAS</option>
+                        <option value="VISA">VISA</option>
+                        <option value="MASTERCARD">MASTERCARD</option>
+                        <option value="OTRA">OTRA</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="terminal">Terminal:</label>
+                    <select id="terminal" name="terminal">
+                        <option value="TODAS">TODAS</option>
+                        <!-- Agrega opciones para las terminales -->
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button onclick="buscarTotal()" id="search">Buscar</button>
+                </div>
+        </div>
+
+<div class="conteiner-register">
+
+   
+    <p class="p-register" id="cantRegistros">Cantidad de registros:0 </p>
+</div>
+
+            <div class="table-container">
+                <table class="miTabla" id="miTabla">
+                    <thead>
+                        <tr class="a">
+                            <th>FECHA</th>
+                            <th>COMERCIO</th>
+                            <th>TR ID</th>
+                            <th>OP ID</th>
+                            <th>TIPO OP.</th>
+                            <th>STATUS</th>
+                            <th>TIPO T.</th>
+                            <th>MARCA</th>
+                            <th>CUOTAS</th>
+                            <th>MONTO</th>
+                            <th>INFO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyxd">
+                        <tr class="a">
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal" id="myModal" style="display: none;">
+            <div class="card">
+                <span class="close" id="closeModal">&times;</span>
+                <div class="card-header">
+                    <h2>No se encontraron ventas</h2>
+                </div>
+                <div class="card-body">
+                    <p>Intente de nuevo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

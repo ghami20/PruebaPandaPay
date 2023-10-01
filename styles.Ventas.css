@@ -1,0 +1,192 @@
+/* Estilos para la tabla */
+table {
+    width: 200%; /* Ancho del 60% para que ocupe el 60% del espacio disponible */
+    margin: 20px auto; /* Centra la tabla horizontalmente y agrega margen superior */
+    border-collapse: collapse; /* Usa "collapse" para colapsar los bordes */
+    border-spacing: 0; /* Establece el espaciado entre bordes a 0 */
+   /* border: solid; */
+   border-color: #444;
+   border-radius: 10%;
+    height: 300px; /* Altura deseada */
+    margin-bottom: 10px;
+}
+
+#miTabla {
+    border-radius: 10%;
+    width: 100%;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+/* Estilos para las celdas de encabezado */
+th {
+    background-color: white; /* Fondo blanco */
+    color: #000000; /* Color de letra negro */
+    padding: 13px;
+    margin: 30px;
+    text-align: left;
+    border: none; /* Elimina el borde en las celdas de encabezado */
+    border-top: none; /* Elimina el borde superior */
+    border-left: none; /* Elimina el borde izquierdo */
+    border-right: none; /* Elimina el borde derecho */
+    border-spacing: 0; /* Establece el espaciado entre bordes a 0 */
+}
+
+.a {
+    border-bottom: 3px solid #444;
+}
+
+/* Estilos para las filas pares */
+tr:nth-child(even) {
+    background-color: #ffffff; /* Blanco */
+}
+
+/* Estilos para las filas impares */
+tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Gris claro */
+}
+
+/* Estilos para las celdas de datos */
+td {
+    padding: 8px;
+    text-align: left;
+    border: none; /* Elimina el borde en las celdas de datos */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px; /* Añade espaciado alrededor del contenido */
+    
+}
+
+/* Estilos para el contenido de ventas.html */
+/* Estilos para el contenido de ventas.html */
+#content {
+    flex: 1;
+    font-family: 'Open Sans';
+    display: flex;
+    width: 76%;
+    margin: 0 auto;
+    /* padding: 20px; */
+
+    margin-right: 10px;
+    margin-top: 14px;
+    align-items: center;
+}
+
+.content-table{
+    font-family: 'Open Sans';
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Aplica el border-radius al contenedor, no a la tabla */
+#content .table-container {
+    overflow: hidden; /* Oculta el contenido que se desborde del contenedor */
+}
+
+/* Estilos para la búsqueda y el botón */
+.date-filter {
+    background-color: white;
+    font-family: 'Open Sans';
+    padding: 20px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Centrar horizontalmente */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    width: 93%;
+    margin-bottom: 21px;
+    margin-top: 10px;
+}
+
+/* Estilos para el botón */
+#search {
+    background-color: #63b724;
+    border-radius: 23px;
+    height: 4vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+.table-container{
+    background-color: white;
+    padding: 4px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Centrar horizontalmente */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    width: 95%;
+    
+}
+/* Añade un espacio entre el botón y los selects */
+.button-container {
+    margin-left: 5px;
+    width: 10%; /* Ajusta el espaciado entre el botón y los selects */
+}
+  /* Agregar estilos personalizados para el formulario */
+  .cambiarContraseña {
+    width: 200px; /* Cambia el ancho a "auto" o cualquier otro valor deseado */
+    margin: 0 auto; /* Centrar el formulario en la página */
+    padding: 20px; /* Espaciado interior para el formulario */
+}
+
+/* Estilo para las etiquetas */
+.cambiarContraseña label {
+    display: block; /* Mostrar cada etiqueta en una línea nueva */
+    margin-bottom: 10px; /* Espaciado inferior entre etiquetas */
+}
+
+/* Estilo para los campos de entrada */
+.cambiarContraseña input {
+    width: 100%; /* Los campos de entrada ocuparán todo el ancho del formulario */
+    padding: 5px; /* Espaciado interior para los campos */
+    margin-bottom: 10px; /* Espaciado inferior entre campos */
+}
+
+.dialog-box {
+    background-color: #0073e6; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    text-align: center; /* Alineación del texto */
+    position: relative; /* Posición relativa para el posicionamiento */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilo para el triángulo de la punta del globo de diálogo */
+.dialog-box::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Posición superior */
+    left: 50%; /* Posición izquierda */
+    border-width: 10px; /* Tamaño del triángulo */
+    border-style: solid;
+    border-color: transparent transparent #0073e6 transparent; /* Color del triángulo */
+    transform: translateX(-50%); /* Centrar horizontalmente */
+}
+  /* Estilo para el botón */
+  .button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interior */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+/* Cambiar el color del botón al pasar el cursor */
+.button:hover {
+    background-color: #45a049; /* Cambiar el color de fondo en el hover */
+}

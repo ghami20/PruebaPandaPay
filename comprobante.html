@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Home.js"></script>
+    <link rel="stylesheet" href="styles.Ventas.css">
+    <link rel="stylesheet" href="styles.comprobante.css">
+</head>
+<body>
+    <div id="content">
+        <!-- Contenido de ventas.html -->
+        <div class="content-table">
+            <div class="content-date">
+                <div class="date">
+                <label>Fecha:</label>
+                <select id="desdeDia" name="desdeDia">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <!-- Agrega todas las opciones de días -->
+                </select>
+                <select id="desdeMes" name="desdeMes">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <!-- Agrega todas las opciones de meses -->
+                </select>
+                <select id="desdeAnio" name="desdeAnio">
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <!-- Agrega todas las opciones de años -->
+                </select>
+                <div class="button-container">
+                    <button id="search">Buscar</button>
+                </div>
+            </div>
+            <div class="content-liquidacion">
+                <p class="p-liquidacion">LIQUIDACION: 17-08-23</p>
+            </div>
+        </div>
+            <div class="conteiner-info"> <!-- Abre el div correcto aquí -->
+                <div class="content-1">
+                    <div class="title">STOCK VIRTUAL</div>
+                    <div>CALLE: CORDOBA ALTURA: 2028 PISO: -DEPTO:- </div>
+                    <div>BUENOS AIRES, BUENOS_AIRES(B1824AYX)</div>
+                    <div>MISCELANEOS</div>
+                    <div>CUIT: 30716567709</div>
+                </div>
+    
+                <div class="content-2">
+                    <div class="title">ENTIDAD PAGADORA: GRUPO PANDA SRL</div>
+                    <div>AV.CASAEROS 1234, 1A</div>
+                    <div>CABA, CABA (1427)</div>
+                    <div>SERVICIOS DE COBROS</div>
+                    <div>CUIT: 33-71787575-9</div>    
+                </div> <!-- Cierra el div correctamente aquí -->
+            </div>
+    
+            <div class="parrafo">
+                <p>LA LEY ESTABLECE LA OBLIGACION DE SOLICITAR CODIGO DE AUTORIZACION,
+                    DE NO EFECTUAR DIFERENCIA DE PRECIOS ENTRE OPERACIONES EN EFECTIVO
+                    Y CON TARJETA Y DE VERIFICAR LA IDENTIDAD DEL PORTADOR DE LA TARJETA,
+                    PARA LO CUAL DEBERIA REGISTRAR TIPO Y NRO. DE DOCUMENTO EN EL COMPROBANTE
+                    DE VENTAS
+                </p>
+            </div>
+
+            <div class="conteiner-transacciones">
+                <p>No se encontraron transacciones para la fecha indicada</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+/*-----------------Dark Mode---------------------------------------------------------- */
+.night-mode {
+    background-color: #333; /* Cambia el color de fondo a uno oscuro */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    /* Agrega más estilos nocturnos aquí */
+}
+.night-content{
+
+}
+/* Estilos para el modo nocturno */
+.night-mode body {
+    background-color: #222; /* Color de fondo en modo nocturno para el cuerpo */
+    color: #fff; /* Color del texto en modo nocturno para el cuerpo */
+}
+
+.night-mode .container {
+    background-color: #111; /* Color de fondo en modo nocturno para el contenedor */
+    color: #fff; /* Color del texto en modo nocturno para el contenedor */
+}
+
+.night-mode .options {
+    color: #fff; /* Color del texto en modo nocturno para las opciones */
+}
+
+.night-mode .option {
+    color: #fff; /* Color del texto en modo nocturno para las opciones */
+}
+
+.night-mode input {
+    background-color: #333; /* Color de fondo en modo nocturno para los campos de entrada */
+    color: #fff; /* Color del texto en modo nocturno para los campos de entrada */
+    border-color: #666; /* Color del borde en modo nocturno para los campos de entrada */
+}
+
+/* Estilos para los botones con iconos en modo nocturno */
+.night-mode .button {
+    background-color: #333; /* Color de fondo en modo nocturno para los botones */
+    color: #fff; /* Color del texto en modo nocturno para los botones */
+    border-color: #666; /* Color del borde en modo nocturno para los botones */
+}
+
+/* Estilos para el nav en modo nocturno */
+.night-mode .header {
+    background-color: #111; /* Color de fondo en modo nocturno para el header */
+}
+
+.night-mode .navbar {
+    background-color: #111; /* Color de fondo en modo nocturno para la barra de navegación */
+}
+
+.night-mode .nav-paragraph {
+    color: #fff; /* Color del texto en modo nocturno para los enlaces de navegación */
+}
+
+.night-mode .navbar a {
+    color: #fff; /* Color del texto en modo nocturno para los enlaces de navegación */
+}
+
+.night-mode .navbar .button {
+    background-color: #333; /* Color de fondo en modo nocturno para los botones en el navbar */
+    color: #fff; /* Color del texto en modo nocturno para los botones en el navbar */
+}
+
+/* Estilos para el menú en modo nocturno */
+.night-mode .menu {
+    background-color: #111; /* Color de fondo en modo nocturno para el menú */
+}
+
+.night-mode .menu ul {
+    color: #fff; /* Color del texto en modo nocturno para los elementos de la lista en el menú */
+}
+
+.night-mode .menu button {
+    color: #fff; /* Color del texto en modo nocturno para los botones en el menú */
+}
+
+.night-mode .menu li {
+    border-color: #666; /* Color del borde en modo nocturno para los elementos de la lista en el menú */
+}
+
+.night-mode .menu li.active {
+    background-color: #666; /* Color de fondo en modo nocturno para los elementos activos en el menú */
+    color: #fff; /* Color del texto en modo nocturno para los elementos activos en el menú */
+}
+
+/* Estilos para el contenido en modo nocturno */
+.night-mode #content {
+    background-color: #111; /* Color de fondo en modo nocturno para el contenido */
+}
+
+/* Estilos para el botón de cambio de modo en modo nocturno */
+.night-mode #nightModeButton {
+    background-color: #333; /* Color de fondo en modo nocturno para el botón de cambio de modo */
+    color: #fff; /* Color del texto en modo nocturno para el botón de cambio de modo */
+}/* Estilos para el modo nocturno */
+.night-mode {
+    background-color: #333; /* Cambia el color de fondo a uno oscuro */
+    color: #fff; /* Cambia el color del texto a blanco */
+    /* Agrega más estilos nocturnos aquí */
+}
+
+/* Estilos para el contenido en modo nocturno */
+.night-mode #content {
+    background-color: #444; /* Cambia el color de fondo en modo nocturno para el contenido a gris */
+    color: #fff; /* Cambia el color del texto en modo nocturno para el contenido a blanco */
+}
+
+.night-mode .table-container{
+
+    background-color: #555; /* Cambia el color de fondo en modo nocturno para el contenedor de fecha a un tono más oscuro de gris */
+    color: #fff; 
+}
+
+.night-mode tbody{
+
+    background-color: #555; /* Cambia el color de fondo en modo nocturno para el contenedor de fecha a un tono más oscuro de gris */
+    color: #020202; 
+}
+
+
+/* Estilos para los elementos dentro de #content en modo nocturno */
+.night-mode #content .date-filter {
+    background-color: #555; /* Cambia el color de fondo en modo nocturno para el contenedor de fecha a un tono más oscuro de gris */
+    color: #fff; /* Cambia el color del texto en modo nocturno para el contenedor de fecha a blanco */
+}
+
+.night-mode #content .cambiarContraseña {
+    background-color: #666; /* Cambia el color de fondo en modo nocturno para el formulario a un tono más oscuro de gris */
+    color: #fff; /* Cambia el color del texto en modo nocturno para el formulario a blanco */
+}
+
+.night-mode #content .cambiarContraseña label {
+    color: #fff; /* Cambia el color del texto en modo nocturno para las etiquetas del formulario a blanco */
+}
+
+.night-mode #content .cambiarContraseña input {
+    background-color: #777; /* Cambia el color de fondo en modo nocturno para los campos de entrada del formulario a un tono más oscuro de gris */
+    color: #fff; /* Cambia el color del texto en modo nocturno para los campos de entrada del formulario a blanco */
+}
+
+.night-mode #content .dialog-box {
+    background-color: #444; /* Cambia el color de fondo en modo nocturno para el globo de diálogo a gris */
+    color: #fff; /* Cambia el color del texto en modo nocturno para el globo de diálogo a blanco */
+}
